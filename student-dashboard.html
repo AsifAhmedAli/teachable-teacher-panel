@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html class=" video video no-videoautoplay no-videoautoplay">
+
+<head>
+
+  <link
+    href="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:32,height:32/https://file-uploads.teachablecdn.com/c1f1452bf21f4e958cf8265cf27e29f1/c5219c3caf2d4b16937be9767c7c8f1c"
+    rel="icon" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+    href="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:72,height:72/https://file-uploads.teachablecdn.com/c1f1452bf21f4e958cf8265cf27e29f1/c5219c3caf2d4b16937be9767c7c8f1c"
+    rel="apple-touch-icon" type="image/png">
+  <link
+    href="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/cresize=width:144,height:144/https://file-uploads.teachablecdn.com/c1f1452bf21f4e958cf8265cf27e29f1/c5219c3caf2d4b16937be9767c7c8f1c"
+    rel="apple-touch-icon" type="image/png">
+  <link
+    href="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:320,height:345/https://file-uploads.teachablecdn.com/150cf1fd59d843f78483492f0afcc4f1/5562d58c230f444db60f608d39b6b225"
+    rel="apple-touch-startup-image" type="image/png">
+  <link
+    href="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:640,height:690/https://file-uploads.teachablecdn.com/150cf1fd59d843f78483492f0afcc4f1/5562d58c230f444db60f608d39b6b225"
+    rel="apple-touch-startup-image" type="image/png">
+  <link rel="stylesheet" media="screen"
+    href="./student-dashboard_files/bootstrap-a14e0219bff457941c01e229139fcb9f4709e289d96efa3a24bad96561d56e6c.css"
+    data-turbolinks-track="true">
+  <link href="./student-dashboard_files/base.css" rel="stylesheet" data-turbolinks-track="true">
+  <link rel="stylesheet" href="./student-dashboard_files/student-dashboard.css">
+  <title>CHROMA TECH ACADEMY</title>
+  <style id="ace-twilight">
+    body{
+      overflow-x: hidden;
+    }
+    .ace-twilight .ace_gutter {
+      background: #232323;
+      color: #E2E2E2
+    }
+.v1-header{
+  width: 100vw;
+}
+footer{
+  width: 100vw;
+}
+
+.dropdown-menu{
+  color: black;
+  width: 250px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.dropdown-menu a{
+  color: black !important;
+}
+
+
+.hidden{
+    display: none !important;
+  }
+
+  #loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Light black background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+#loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border-radius: 50%;
+  position: absolute;
+        top: 50%;
+        left: 50%;
+        
+  background:
+    linear-gradient(0deg ,rgb(0 0 0/50%) 30%,#0000 0 70%,rgb(0 0 0/100%) 0) 50%/8% 100%,
+    linear-gradient(90deg,rgb(0 0 0/25%) 30%,#0000 0 70%,rgb(0 0 0/75% ) 0) 50%/100% 8%;
+  background-repeat: no-repeat;
+  animation: l23 1s infinite steps(12);
+}
+.loader::before,
+.loader::after {
+   content: "";
+   grid-area: 1/1;
+   border-radius: 50%;
+   background: inherit;
+   opacity: 0.915;
+   transform: rotate(30deg);
+}
+.loader::after {
+   opacity: 0.83;
+   transform: rotate(60deg);
+}
+@keyframes l23 {
+  100% {transform: rotate(1turn)}
+}
+  
+    #logout-button{
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+
+<body style="padding-bottom: 134px;">
+    <header class="v1-header">
+
+    <div class="navbar-fedora is-at-top is-signed-in" id="navbar" role="navigation">
+      <div class="btstrp-container">
+        <div class="btstrp-navbar-header navbar-header-courses">
+          <button class="btstrp-navbar-toggle" data-target=".navbar-header-collapse" data-toggle="collapse"
+            type="button">
+            <span class="btstrp-sr-only">
+              Toggle navigation
+            </span>
+            <span class="btstrp-icon-bar"></span>
+            <span class="btstrp-icon-bar"></span>
+            <span class="btstrp-icon-bar"></span>
+          </button>
+
+          <a class="btstrp-navbar-brand header-logo" href="student-dashboard.html">
+            <img src="./student-dashboard_files/convert.jpg" alt="CHROMA TECH ACADEMY"
+              srcset="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=height:120/https://file-uploads.teachablecdn.com/20c80a93c883406aa55c52f512b098f1/bd405ea826814df8b698ecb34115c2cb 2x">
+          </a>
+
+          <div class="collapse btstrp-navbar-collapse navbar-header-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <!-- <li>
+                <a class="fedora-navbar-link navbar-link"
+                  href="https://chromatechacademy.teachable.com/courses/enrolled" target="">
+                  Courses
+                </a>
+              </li> -->
+              <!-- <li>
+                <a class="fedora-navbar-link navbar-link" href="https://chromatechacademy.teachable.com/courses"
+                  target="">
+                  All Products
+                </a>
+              </li> -->
+
+
+              <li class="dropdown">
+                <a aria-expanded="false" aria-controls="user-dropdown" aria-haspopup="true"
+                  href="https://chromatechacademy.teachable.com/#"
+                  class="fedora-navbar-link navbar-link dropdown-toggle open-my-profile-dropdown"
+                  data-toggle="dropdown">
+                  <img class="gravatar" src="./student-dashboard_files/f6de24c3a03e46581bc2908b1e72bea9.png"
+                    alt="asifahmedjutt103@gmail.com">
+                  <span class="navbar-current-user">Asif Dev</span>
+                </a>
+                <ul class="dropdown-menu" id="user-dropdown">
+                  <li class="user-profile">
+                    <a href="edit-profile.html">
+                      Edit Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a href="enrolled-courses.html">
+                      Course Management
+                    </a>
+                  </li>
+                  <!-- <li>
+                    <a href="courses-history.html">
+                      Purchase History
+                    </a>
+                  </li> -->
+                  <!-- <li>
+                    <a href="edit-profile.html">
+                      Add / Change Credit Card
+                    </a>
+                  </li> -->
+                  <!-- <li>
+                    <a href="edit-profile.html">
+                      Address
+                    </a>
+                  </li> -->
+                  <li>
+                    <!-- <a href="edit-profile.html">
+                      Contact
+                    </a>
+                  </li> -->
+                  <li class="user-signout">
+                    <a id="logout-button" >
+                      Log Out
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div role="main" class="view-school">
+    <div class="view-directory course-directory signed-in-directory">
+      <div class="container">
+        <div class="row search">
+
+          <!-- <div class="pull-left course-filter">
+            <div class="filter-label">
+              Category:
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-default btn-lg btn-course-filter dropdown-toggle" type="button"
+                data-toggle="dropdown" aria-expanded="false" aria-controls="filter-dropdown">
+                All <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" id="filter-dropdown">
+                <li><a href="https://chromatechacademy.teachable.com/courses">All</a></li>
+              </ul>
+            </div>
+          </div> -->
+
+          <!-- <div class="pull-left course-filter">
+            <div class="filter-label">
+              Author:
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-default btn-lg btn-course-filter dropdown-toggle" type="button"
+                data-toggle="dropdown" aria-expanded="false" aria-controls="courses-dropdown">
+                All <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" id="courses-dropdown">
+                <li><a href="https://chromatechacademy.teachable.com/courses">All</a></li>
+                <li><a href="https://chromatechacademy.teachable.com/courses/author/1511357">Chroma Tech Academy</a>
+                </li>
+              </ul>
+            </div>
+          </div> -->
+            
+          <div class="col-lg-4 col-md-4 col-xs-12 pull-right " id="search-form">
+            <form role="search" method="get">
+              <div class="input-group">
+                <label for="search-courses" class="sr-only">Find a product</label>
+                <input class="form-control search input-lg" data-list=".list" id="search-courses" name="query"
+                  placeholder="Find a product" type="text">
+                <span class="input-group-btn">
+                  <button aria-label="Search Courses" id="search-course-button" class="btn search btn-default btn-lg"
+                    type="submit"><i class="fa fa-search"></i></button>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+
+        <div class="row course-list list" id="course-container">
+
+          
+  
+          
+
+          <!-- <div class="col-xs-12 col-sm-6 col-md-4">
+            <div data-course-id="2401176" data-course-url="/courses/enrolled/2401176" ,="" class="course-listing">
+              <div class="row">
+                <a href="https://chromatechacademy.teachable.com/courses/enrolled/2401176" data-role="course-box-link">
+                  <div class="col-lg-12">
+
+                    <div class="course-box-image-container">
+                      <img class="course-box-image" src="./student-dashboard_files/Thumbnail.png" role="presentation"
+                        alt="">
+                    </div>
+                    <div class="course-listing-title" id="course-title" role="heading" aria-level="2"
+                      >
+                   
+                    </div>
+
+                    <div class="col-xs-12 course-listing-enrolled" aria-hidden="false">
+                       <div class="progressbar ">
+                        <div class="progressbar-fill" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                          aria-labelledby="percent-complete-2401176" style="min-width: 0%;" aria-valuenow="0"></div>
+                      </div> -->
+                      <p class="course-access-limit hidden">Available until <span></span></p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="course-listing-extra-info" aria-hidden="false">
+               
+
+                <!-- <div class="" aria-hidden="false">
+                  <div class="small course-progress ">
+                    <span class="percentage" id="percent-complete-2401176" data-course-id="2401176">0%</span>
+                    <br>
+                    COMPLETE
+                  </div>
+                </div> -->
+
+                <div class="hidden" aria-hidden="true">
+                  <div class="small course-price" data-include-vat-price="5209891">
+                    $59.99/month
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <center>
+            </center>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+    <footer class="bottom-menu bottom-menu-inverse">
+      <div class="footerContent">
+        <div class="flex-grid">
+          <div class="col-12-xs col-4-s col-4-m footer-column">
+            <p>
+              ©
+              CHROMA TECH ACADEMY
+              2024
+            </p>
+          </div>
+          <div class="col-12-xs col-4-s col-4-m footer-column">
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://chromatechacademy.teachable.com/p/terms">
+                  Terms of Use
+                </a>
+              </li>
+              <li>
+                <a href="https://chromatechacademy.teachable.com/p/privacy">
+                  Privacy Policy
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12-xs col-4-s col-4-m footer-column">
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.chromatechacademy.net/" target="">
+                  Visit Us
+                </a>
+              </li>
+              <li>
+                <a class="powered-by" href="https://teachable.com/?src=school_footer"
+                  style="visibility: visible !important;">Powered by <img
+                    src="./student-dashboard_files/teachable-logomark-white-31d2296978598bacace50e6d48a2e1223c20a9b074af424acdd465676f81560f.svg"
+                    class="powered-by-logo" alt="Teachable"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="config.js"></script>
+  <script src="./integration/student-dashboard.js"></script>
+  <script src="./integration/logout.js"></script>
+  <script src="./integration/auth.js"></script>
+
+  <script>
+    
+  </script>
+  
+
+ 
+  
+
+
+
+ 
+</body>
+
+</html>
